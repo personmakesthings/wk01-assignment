@@ -1,0 +1,447 @@
+/* IMPORT */
+
+@font-face {
+    font-family: "Poetsen One";
+    src: url('./fonts/PoetsenOne-Regular.ttf');
+}
+
+
+
+
+
+/* DOCUMENT */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+/* GENERAL ELEMENTS */
+
+body {
+    margin: 0px;
+    background-color: rgb(12, 6, 6);
+}
+
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-family: "Poetsen One", sans-serif, monospace;
+    text-shadow:
+    2px 2px 0 black,
+    -2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black;
+    margin: 0px;
+}
+
+h2 {
+    color: white;
+    font-size: 25px;
+    font-family: "Poetsen One", sans-serif, monospace;
+    text-shadow:
+    2px 2px 0 black,
+    -2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black;
+    margin: 0px;
+}
+
+
+ul {
+    color: white;
+    font-family: "Poetsen One", sans-serif, monospace;
+    margin: 0px;
+    text-shadow:
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black;
+}
+
+p {
+    color: white;
+    font-family: "Poetsen One", sans-serif, monospace;
+    text-shadow:
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: rgb(202, 41, 62);
+}
+
+
+
+
+
+
+/* NAVIGATION*/
+
+
+.nav {
+    z-index: 2;
+    position: fixed;
+    top: 15px;
+    height: 90px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+    @media only screen and (max-width: 800px) {
+        .nav {
+            left: -10px;
+            width: 100vw;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media only screen and (max-width: 670px) {
+        .nav {
+            transform: scale(0.9);
+        }
+    }
+
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-img {
+    margin: 0px 10px 0px 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links > p {
+    margin: 0px 15px 0px 15px;
+}
+
+.nav-bg {
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    background: linear-gradient(black, transparent); 
+}
+
+
+.back-to-top {
+    z-index: 3;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.55;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+/* FEATURE SECTIONS */
+
+.title {
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px black solid; */
+    /* border for test purposes only */
+}
+
+    @media only screen and (max-width: 750px) {
+        .title {
+            width: 60%;
+            transform: scale(0.9);
+            bottom: 250px;
+        }
+    }
+/* Required because I've specified a width & height for the title, making it a box. It won't adjust to the size of the display without this.*/
+
+
+.button{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Poetsen One", sans-serif, monospace;
+    text-shadow:
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black;
+    width: 160px;
+    padding: 25px;
+    margin: 20px 0px 0px 0px;
+    border: 2px white solid;
+    border-radius: 30px;
+}
+
+.button:hover{
+    text-align: center;
+    color:black;
+    border: 2px white solid;
+    background-color: white;
+    text-shadow: none;
+}
+
+.button-side {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.button-small {
+    width: 100px;
+    margin: 0px 10px 0px 0px;
+}
+
+.feature {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-color: white;
+}
+
+    .feature-right {
+        background-position: right;
+    }
+
+    .feature-center {
+        background-position: center;
+    }
+
+#feature1{
+    background-image: url('./images/feature1.jpg');
+}
+
+#feature2{
+    background-image: url('./images/feature2.jpg');
+}
+
+#feature3{
+    background-image: url('./images/feature3.jpg');
+}
+
+#feature4{
+    background-image: url('./images/feature4.jpg');
+}
+
+#feature5{
+    background-image: url('./images/feature5.jpg');
+}
+
+.feature-gradient{
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(90, 35, 62, 0.09) 100%);
+}
+
+.feature-gradient2{
+    height: 100vh;
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(90, 35, 62, 0.09) 100%);
+}
+
+.feature-divide {
+    height: 1vh;
+}
+
+
+
+
+
+
+
+/* SECOND PAGE */
+
+/* SECOND PAGE - NAVIGATION */
+
+
+.nav2 {
+    z-index: 2;
+    position: absolute;
+    top: 15px;
+    height: 90px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    @media only screen and (max-width: 810px) {
+        .nav2 {
+            left: -10px;
+            width: 100vw;
+        }
+    }
+
+    @media only screen and (max-width: 670px) {
+        .nav2 {
+            transform: scale(0.9);
+        }
+    }
+
+.nav2 > p {
+    margin: 0px 0px 0px 50px;
+}
+
+.nav-bg2 {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 90px;
+    background: linear-gradient(black, transparent); 
+}
+
+
+
+/* SECOND PAGE - PAGE */
+
+.feature-small {
+    height: 300px;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 3px black solid; */
+    /* border for test purposes only */
+}
+
+    @media only screen and (max-width: 750px) {
+        .feature-small {
+            width: 65%;
+        }
+    }
+
+
+.body-text {
+    line-height: 200%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: justify;
+    /* background-color: rgb(97, 46, 31); */
+}
+
+.img {
+    opacity: 0.85;
+}
+
+.feature-divide2 {
+    height: 5px;
+    background-color: rgb(196, 184, 184);
+}
+
+.round-corners {
+    border-radius: 40px;
+}
+
+
+    @media only screen and (max-width: 750px) {
+        .body-text {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 750px) {
+        .img {
+            width: 100%;
+        }
+    }
+
+.img-box {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 0px 0px;
+    gap: 15px;
+}
+
+
+.caption {
+    line-height: 150%;
+    text-align: center;
+    font-size: 14px;
+    color:rgb(187, 178, 168);
+}
+
+
+.gradient3{
+    position: absolute;
+    height: 300px;
+    width: 100vw;
+    background-image: url('./images/feature1.jpg');
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.514) 0%, rgba(89, 10, 10, 0.5) 100%);
+}
+
+
+#feature6{
+    height: 300px;
+    width: 100vw;
+    background-image: url('./images/feature4.jpg');
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+}
+
+
+    @media only screen and (max-width: 800px) {
+        #feature6, .gradient3 {
+            height: 400px;
+        }
+    }
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+}
+
+.disclaimer {
+    margin: 0 auto;
+    width: 400px;
+    font-size: 11px;
+}
+
+.disclaimer > p {
+    color:rgb(187, 178, 168);
+    margin: 0px;
+}
+
